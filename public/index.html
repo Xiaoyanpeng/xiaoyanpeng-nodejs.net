@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>麦收网</title>
+<link rel="stylesheet" href="css/lib/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/base.css">
+<!--[if lt IE 9]>
+  <script src="js/lib/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="[JS library]"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="js/lib/selectivizr.js"></script>
+      <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+</head>
+<body>
+    <div class="web-top">
+        <div class="wm-1200">
+            <div class="notice-txt">麦收分销—实现流量变现</div>
+            <div class="top-login">
+                <span id="loginstatus"></span>
+            </div>
+        </div>
+    </div><!--顶部-->
+
+    <div class="st-nav">
+        <div class="wm-1200">
+            <div class="st-logo"><img src="images/logo/mslogo.png"></div>
+            <div class="st-menu">
+                <ul>
+                    <li class="active"><a href="#" ><div class="st-li-lan">首页<br><span class="st-li-en">INDEX</span></div></li>
+                    <li><a href="hotel.html" ><div class="st-li-lan">酒店<br><span class="st-li-en">HOTEL</span></div></a></li>
+                    <li><a href="" ><div class="st-li-lan">机票<br><span class="st-li-en">PLANE</span></div></a></li>
+                    <li><a href="" ><div class="st-li-lan">租车<br><span class="st-li-en">CAR</span></div></a></li>
+                    <li><a href="" ><div class="st-li-lan">签证<br><span class="st-li-en">VISA</span></div></a></li>
+                    <li><a href="" ><div class="st-li-lan">度假<br><span class="st-li-en">TRAVEL</span></div></a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--主导航-->
+
+    <!-- 轮播图 -->
+    <div id="carousel-example-generic" class="carousel slide t-carou" data-ride="carousel">
+      <ol class="carousel-indicators" id="st-li">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" id="carou-item" role="listbox">
+        <div class="item active">
+          <img src="uploads/index/banner/ban1.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="uploads/index/banner/ban1.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="uploads/index/banner/ban1.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 登录窗口 -->
+    <div class="i-area">
+      <div class="st-left">
+        <div class="active">机票查询</div>
+        <div>酒店</div>
+      </div>
+      <div class="st-right">
+        <div class="st-trick">
+          <div class="active">国外机票</div>
+          <div>国内机票</div> 
+        </div>
+        <div class="st-route">
+          <span class="active"><i class="iconfont icon-selected3"></i>&nbsp;往返</span>&#x3000;<span><i class="iconfont icon-unselected3"></i>&nbsp;单程</span>&#x3000;
+          <span><i class="iconfont icon-unselected3"></i>&nbsp;多程</span>
+        </div>
+        <form>
+        <div class="st-input">
+          <div>出发城市&#x3000;|</div>
+          <input type="text" name="">
+          <p><i class="iconfont icon-up"></i></p>
+        </div>
+        <div class="st-input">
+          <div>抵达城市&#x3000;|</div>
+          <input type="text" name="">
+          <p><i class="iconfont icon-up"></i></p>
+        </div>
+        <div class="st-input">
+          <div>启程时间&#x3000;|</div>
+          <input type="text" name="" id="sdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'%y-%M-%d',maxDate:'#F{$dp.$D(\'edate\')}'})">
+          <p><i class="iconfont icon-up"></i></p>
+        </div>
+        <div class="st-input">
+          <div>抵达时间&#x3000;|</div>
+          <input type="text" name="" id="edate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\'sdate\')}',startDate:'#F{$dp.$D(\'sdate\',{d:+1})}'})" >
+          <p><i class="iconfont icon-up"></i></p>
+        </div>
+        <div class="st-button">
+          <input type="submit" name="" value="搜索">
+          <div><a href="">高级搜索</a></div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- 登录窗口结束 -->
+  <!--酒店开始-->
+    <div class="big">
+  	    <div class="wm-1200">
+            <div class="st-slideTab">
+                <div class="st-tabnav">
+                    <h3>酒店<div class="st-h3">&nbsp;[HOTEL]</div></h3>
+                    <span class="on">国外酒店</span>
+                    <span>国内酒店</span>
+                    <a href="" class="more">更多酒店&gt;</a>
+                </div>
+                <div class="st-hotel-ul">
+                    <ul class="st-hotel-li">
+                        <li class="active"><a href="">厦门</a></li>
+                        <li><a href="">北京</a></li>
+                        <li><a href="">上海</a></li>
+                    </ul>
+                </div>
+                <div class="st-tabcon">
+                    <ul class="st-cp-list">
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">海景千禧大酒店</span>
+                                    <p>Millennium Harbourview Hotel Xiamen</p>
+                                </a>
+                            </div>
+                            <div class="fl div-star"><div class="show-unstar"><span style="width:100%;" class="show-star"></span></div></div>
+                            <div class="address">
+                                <i class="iconfont icon-address"></i>&nbsp;<span>厦门,中国</span>
+                            </div>
+                            <div class="price"><span>￥897</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">海景千禧大酒店</span>
+                                    <p>Millennium Harbourview Hotel Xiamen</p>
+                                </a>
+                            </div>
+                            <div class="fl div-star"><div class="show-unstar"><span style="width:100%;" class="show-star"></span></div></div>
+                            <div class="address">
+                                <i class="iconfont icon-address"></i>&nbsp;<span>厦门,中国</span>
+                            </div>
+                            <div class="price"><span>￥897</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">海景千禧大酒店</span>
+                                    <p>Millennium Harbourview Hotel Xiamen</p>
+                                </a>
+                            </div>
+                            <div class="fl div-star"><div class="show-unstar"><span style="width:100%;" class="show-star"></span></div></div>
+                            <div class="address">
+                                <i class="iconfont icon-address"></i>&nbsp;<span>厦门,中国</span>
+                            </div>
+                            <div class="price"><span>￥897</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">海景千禧大酒店</span>
+                                    <p>Millennium Harbourview Hotel Xiamen</p>
+                                </a>
+                            </div>
+                            <div class="fl div-star"><div class="show-unstar"><span style="width:100%;" class="show-star"></span></div></div>
+                            <div class="address">
+                                <i class="iconfont icon-address"></i>&nbsp;<span>厦门,中国</span>
+                            </div>
+                            <div class="price"><span>￥897</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">海景千禧大酒店</span>
+                                    <p>Millennium Harbourview Hotel Xiamen</p>
+                                </a>
+                            </div>
+                            <div class="fl div-star"><div class="show-unstar"><span style="width:100%;" class="show-star"></span></div></div>
+                            <div class="address">
+                                <i class="iconfont icon-address"></i>&nbsp;<span>厦门,中国</span>
+                            </div>
+                            <div class="price"><span>￥897</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">海景千禧大酒店</span>
+                                    <p>Millennium Harbourview Hotel Xiamen</p>
+                                </a>
+                            </div>
+                            <div class="fl div-star"><div class="show-unstar"><span style="width:100%;" class="show-star"></span></div></div>
+                            <div class="address">
+                                <i class="iconfont icon-address"></i>&nbsp;<span>厦门,中国</span>
+                            </div>
+                            <div class="price"><span>￥897</span>&nbsp;起</div>
+                        </li>
+                    </ul>
+                    <div class="st-adimg">
+                        <a href="">
+                            <img src="uploads/index/ad/hotel-ad.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--酒店结束-->
+    <!--度假开始-->
+    <div class="big">
+  	    <div class="wm-1200">
+            <div class="st-slideTab">
+                <div class="st-tabnav">
+                    <h3>度假<div class="st-h3">&nbsp;[TRAVLE]</div></h3>
+                    <a href="" class="more">更多路线选择&gt;</a>
+                </div>
+                <div class="st-tabcon">
+                    <ul class="st-cp-list travel-list li-4n">
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/2.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/2.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">希腊雅典+米科诺斯镇+圣托里尼</span>
+                                </a>
+                            </div>
+                            <div class="travel-type">自由行</div>
+                            <div class="fl travel-address">11月9号,厦门出发</div>
+                            <div class="fr travel-price"><span>￥13999</span>&nbsp;起</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--度假结束-->
+
+    <div class="big">
+  	    <div class="wm-1200">
+            <div class="fl travel-ad">
+                <a href=""><img src="uploads/index/ad/travel-ad.png" alt=""></a>
+            </div>
+  	    </div>
+    </div>
+
+    <!--租车开始-->
+    <div class="big">
+  	    <div class="wm-1200">
+            <div class="st-slideTab">
+                <div class="st-tabnav">
+                    <h3>租车<div class="st-h3">&nbsp;[CAR]</div></h3>
+                    <a href="" class="more">更多租车&gt;</a>
+                </div>
+                <div class="st-tabcon">
+                    <ul class="st-cp-list travel-list li-4n">
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">自由行豪华租车-牧马人系列</span>
+                                </a>
+                            </div>
+                            <div class="fl car-type">豪华系列</div>
+                            <div class="fr travel-price"><span>￥8999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">自由行豪华租车-牧马人系列</span>
+                                </a>
+                            </div>
+                            <div class="fl car-type">豪华系列</div>
+                            <div class="fr travel-price"><span>￥8999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">自由行豪华租车-牧马人系列</span>
+                                </a>
+                            </div>
+                            <div class="fl car-type">豪华系列</div>
+                            <div class="fr travel-price"><span>￥8999</span>&nbsp;起</div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img class="fl" src="uploads/index/ad/1.jpg" alt="" />
+                                <div class="buy"><a href="" target="_blank">立即预订</a></div>
+                            </div>
+                            <div class="js">
+                                <a href="" target="_black">
+                                    <span class="tit">自由行豪华租车-牧马人系列</span>
+                                </a>
+                            </div>
+                            <div class="fl car-type">豪华系列</div>
+                            <div class="fr travel-price"><span>￥8999</span>&nbsp;起</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--租车结束-->
+     <!--签证开始-->
+    <div class="big">
+  	    <div class="wm-1200">
+            <div class="st-slideTab">
+                <div class="st-tabnav">
+                    <h3>签证<div class="st-h3">&nbsp;[VISA]</div></h3>
+                    <a href="" class="more">其他国家签证&gt;</a>
+                </div>
+                <div class="st-tabcon visa-list">
+                    <div class="fl visa-country">
+                        <div class="visa-header"><span class="active">热门签证</span></div>
+                        <div class="visa-detail">
+                            <p><a href="">希腊</a>&#x3000;<a href="">美国</a>&#x3000;<a href="">英国</a>&#x3000;<a href="">意大利</a>
+                                &#x3000;<a href="">德国</a>&#x3000;<a href="">澳大利亚</a> &#x3000;<a href="">美国</a>&#x3000;<a href="">英国&#x3000;
+                                <a href="">英国</a>&#x3000;<a href="">意大利</a>&#x3000;<a href="">德国</a>&#x3000;<a href="">澳大利亚</a> &#x3000;<a href="">美国</a>&#x3000;<a href=""></a>
+                            </p>
+                            <div class="country-type">亚洲:</div>
+                            <p><a href="">日本</a>&#x3000;<a href="">希腊</a>&#x3000;<a href="">美国</a>&#x3000;<a href="">英国</a></p>
+                        </div>
+                    </div>
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div>
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                   <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                   <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div> 
+                    <div class="fl visa-person">
+                        <a href="">
+                            <div class="fl icon-img">
+                                <img src="uploads/index/icon/english-icon.png" alt="">
+                            </div>
+                            <p class="fl visa-name">德国个人旅游签证（专人陪签）</p>
+                            <p class="visa-price">￥<span>1999</span></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--签证结束-->
+
+    <footer>
+        <div class="big">
+  	        <div class="wm-1200 footer-hr">
+                <div class="triangle"></div>
+                <div class="fl st-footer-model">
+                    <p class="title">预订常见问题 ( Q & A )</p>
+                    <p class="content"><a href="">办理个人签证需要注意哪些点？</a></p>
+                    <p class="content"><a href="">订单无法完成？</a></p>
+                    <p class="content"><a href="">酒店预订不成功？</a></p>
+                    <p class="content"><a href="">找不到订单？</a></p>
+                </div>
+                <div class="fl st-footer-model">
+                    <p class="title">付款方式</p>
+                    <p class="content"><a href="">网银转账付款</a></p>
+                    <p class="content"><a href="">网上银行付款</a></p>
+                    <p class="content"><a href="">支付宝付款</a></p>
+                    <p class="content"><a href="">上门刷卡付款</a></p>
+                </div>
+                <div class="fl st-footer-model">
+                    <p class="title">签订合同</p>
+                    <p class="content"><a href=""> 关于旅游合同签订事宜</a></p>
+                    <p class="content"><a href="">合同相关问题</a></p>
+                    <p class="content"><a href="">如何签订合同</a></p>
+                </div>
+                <div class="fl st-footer-model" style="width:285px;">
+                    <p class="title">联系方式</p>
+                    <p class="content"><a href=""><i class="iconfont icon-address2"></i>&nbsp;厦门软件园二期望海路63号南座602单元</a></p>
+                    <p class="content"><a href=""><i class="iconfont icon-mail"></i>&nbsp;info@mice-solution.com</a></p>
+                    <p class="content"><a href=""><i class="iconfont icon-phone3"></i>&nbsp;400-8866-897</a></p>
+                </div>
+  	        </div>
+            <div class="wm-1200 st-footer-msg">
+                <p><a href="">法律声明</a> | <a href="">品牌荣誉</a> | <a href="">关于我们</a> | <a href="">公司新闻</a> | <a href="">人才招聘</a> | <a href="">联系我们</a></p>
+                <p>Copyright © 2014-2016 by |TN mice-solution.com ICP备案号：闽ICP备12010509号-4</p>
+                <p>服务热线：400-8866-897 E-mail: service@mice-solution.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/lib/jquery-1.11.3.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="lib/datepicker/WdatePicker.js"></script> 
+    <script src="js/header.js"></script>
+    <script type="text/javascript">
+        /*** 轮播图 ***/
+        $('.carousel').carousel({
+            interval: 3000
+        })  
+    </script>
+</body>
+</html>

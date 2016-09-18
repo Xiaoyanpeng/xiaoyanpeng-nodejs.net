@@ -1,0 +1,453 @@
+@charset "utf-8";
+
+/*轮播图*/
+#carou-item img{
+	height:600px;
+	max-width: none;
+	width: 100%;
+}
+.t-carou{
+	width: 97%;
+	margin:0 auto;
+	min-width: 1200px;
+	overflow:hidden; 
+}
+#st-li li{
+	width:20px;
+	height: 6px;
+	border-radius: 5px;
+	margin:0 5px;
+	background-color: #666;
+	border-color: #666;
+}
+#st-li .active{
+	background-color: #e83421;
+	border-color: #e83421;
+}
+/*登录窗口*/
+.i-area{
+	width: 480px;
+	height: 450px;
+	background-color: white;
+	z-index: 999;
+	position: absolute;
+	top: 210px;
+	left: 15%;
+	box-shadow: 0px 0px 4px #eee;
+	font-size: 16px;
+}
+.st-left{
+	background-color: #f0f0f0;
+	width:100px;
+	height:450px;
+	float: left;
+	border-right:solid 1px #ccc;
+}
+.st-right{
+	background-color: white;
+	width:380px;
+	height: 450px;
+	float: left;
+}
+.st-left div{
+	width:100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-right:solid 1px #ccc;
+	cursor: pointer;
+}
+.st-trick div{
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	margin-left: 30px;
+	cursor: pointer;
+}
+.st-trick .active{
+	color: #e83421;
+	border-bottom: solid 2px #e83421;
+	cursor: default;
+}
+.st-left .active{
+	background-color: white;
+	border-right:solid 1px white;
+	font-weight: bold;
+	cursor: default;
+}
+.st-route{
+	padding-left: 30px;
+	height:50px;
+	line-height: 50px;
+	cursor: default;
+}
+.st-route i{
+	cursor: pointer;
+}
+.st-route .active i{
+	cursor: default;
+}
+.st-route .active{
+	color: #e83421;
+}
+.st-input{
+	margin:20px 30px;
+	height: 40px;
+	border:solid 1px #999;
+	border-radius: 5px;
+	padding: 5px;
+	color:#999;
+	cursor: default;
+}
+.st-input div{
+	display: inline-block;
+	width:100px;
+	height: 28px;
+	line-height: 28px;
+	float:left;
+	text-align: center;
+	font-size: 14px;
+}
+.st-input input{
+	display: inline-block;
+	width:170px;
+	height: 28px;
+	line-height: 28px;
+	float:left;
+	border:none;
+	font-size: 14px;
+}
+.st-input p{
+	display: inline-block;
+	width:28px;
+	height: 28px;
+	line-height: 28px;
+	float:left;
+	text-align: center;
+	position: relative;
+}
+.st-input p i{
+	font-size: 14px;
+}
+.st-button input{
+	display: block;
+	width: 130px;
+	height: 40px;
+	background-color: #e83421;
+	margin:0 auto;
+	border-radius: 10px;
+	color: white;
+}
+.st-button{
+	width:100%;
+}
+.st-button div{
+	width: 130px;
+	text-align: center;
+	height: 30px;
+	margin:0 auto;
+	font-size: 14px;
+	line-height: 30px;
+}
+.st-button div a{
+	color:#666;
+}
+/*酒店*/
+.st-slideTab{
+	float:left;
+	width:1200px;
+	margin-top:20px}
+.st-slideTab .st-tabnav{
+	width:1200px;
+	height:40px;
+	border-bottom:1px solid #999}
+.st-slideTab .st-tabnav h3{
+	display: inline-block;
+	color:#333;
+	width:180px;
+	height:40px;
+	line-height:40px;
+	font-size:18px;
+	font-weight:bold;
+}
+.st-slideTab .st-tabnav span{
+	color:#333;
+	height:40px;
+	line-height:40px;
+	margin:0 15px;
+	font-size:16px;
+	cursor:pointer}
+.st-slideTab .st-tabnav span.on{
+	display: inline-block;
+	color:#e83421;
+	height:39px;
+	line-height:40px;
+	border-bottom:2px solid #e83421;
+}
+.st-slideTab .st-tabnav a.more{
+	color:#333;
+	float:right;
+	height:40px;
+	line-height:40px;
+	padding-left:17px;
+}
+.st-hotel-li li{
+	float:left;
+	width:45px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	color:#666;
+	border-radius: 5px;
+	margin:20px 20px 0 0px;
+}
+.st-hotel-ul{
+	width:100%;
+	height:45px;
+}
+.st-hotel-li .active{
+	background-color: #7a3b85;
+}
+.st-hotel-li .active a{
+	color: white;
+}
+.st-h3{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 40px;
+}
+.st-slideTab .st-tabcon{
+	float:left;
+}
+.st-cp-list{
+	float:left;
+	width:915px;
+}
+.st-cp-list li{
+	float:left;
+	width:285px;
+	margin:20px 20px 0px 0;
+	overflow:hidden;
+	/*border-radius:3px;*/
+	/*box-shadow:1px 1px 3px #e5e5e5;*/
+	background:#fff}
+.st-cp-list li .js{
+	float:left;
+	width:265px;
+	color:#333;
+}
+.st-cp-list li .js .tit{
+	float:left;
+	width:285px;
+	line-height:18px;
+	margin:10px 0 0 0;
+	overflow:hidden;
+	font-size:16px;
+}
+.st-cp-list li .js a:hover{
+	color:#e83421;
+}
+.st-cp-list li .pic{
+	float:left;
+	width:285px;
+	height:194px;
+	position:relative;
+}
+.pic img{
+	width:285px;
+	height:194px;
+}
+.st-cp-list li .pic .buy{
+	display:none;
+	position:absolute;
+	left:0;
+	top:0;
+	width:287px;
+	height:195px;
+	border:4px solid #fff;
+	background:url(../images/index/opt-bg.png) repeat;
+}
+.st-cp-list li .pic:hover .buy{
+	display:block;
+}
+.st-cp-list li .pic .buy a{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-20px 0 0 -73px;
+	display:block;
+	color:#fff;
+	width:140px;
+	height:40px;
+	line-height:34px;
+	text-align:center;
+	font-size:24px;
+	border:3px solid #fff;
+	border-radius:30px;
+}
+.js p{
+	font-size: 12px;
+	font-family: Arial;
+	height: 18px;
+	width: 285px;
+	float: left;
+}
+.show-unstar{
+	width:82px;
+	height: 20px;
+	background-image: url(../images/index/un-star.png);
+	background-repeat: no-repeat;
+	float:left;
+}
+.div-star{
+	margin-top: 15px;
+	width: 120px;
+	display: inline-block;
+}
+.show-star{
+	height: 20px;
+	background-image: url(../images/index/star.png);
+	background-repeat: no-repeat;
+	float:left;
+}
+.st-cp-list .address{
+	float:left;
+	height: 20px;
+	width: 185px;
+}
+.st-cp-list .price{
+	width:100px;
+	float: right;
+	font-size: 14px;
+	text-align: right;
+}
+.st-cp-list .price span{
+	color: #e83421;
+	font-size: 18px;
+	font-weight: bold;
+}
+.st-adimg{
+	float:right;
+	width:285px;
+    max-height: 640px;
+	margin-top:20px;
+    overflow: hidden;
+}
+.st-adimg a img{
+	width:285px;
+}
+/*度假*/
+.travel-list{
+	width: 1200px;
+}
+.st-cp-list li .travel-type{
+	font-size: 16px;
+	width: 285px;
+	float: left;
+}
+.travel-address{
+	font-size: 14px;
+	width: 165px;
+	margin-top:15px;
+}
+.travel-price{
+	padding-top: 12px;
+	width:120px;
+	height: 35px;
+	font-size: 14px;
+	text-align: right;
+}
+.st-cp-list .travel-price span{
+	color: #e83421;
+	font-size: 18px;
+	font-weight: bold;
+}
+.travel-ad{
+	width: 1200px;
+	height: 120px;
+	margin: 20px auto 0px;
+}
+/*租车*/
+.car-type{
+	font-size: 12px;
+	width: 165px;
+	margin-top:15px;
+}
+/*签证*/
+.visa-country{
+	width: 285px;
+	height:280px;
+	border: solid 2px #666;
+	margin-right: 20px; 
+	font-weight: bold;
+}
+.visa-list{
+	margin-top: 20px;
+}
+.visa-header{
+	width: 100%;
+	border-bottom: solid 1px #999; 
+}
+.visa-header span{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 20px;
+	font-size: 14px;
+	color:#333;
+}
+.visa-header .active{
+	color:#e83421;
+	border-bottom: 2px solid #e83421; 
+}
+.visa-detail{
+	padding: 15px 20px 20px;
+}
+.visa-detail p{
+	font-size: 12px;
+	color:#333;
+	line-height: 1.8;
+}
+.visa-detail .country-type{
+	margin: 20px 0 5px;
+	color: #999;
+}
+.visa-detail a:hover{
+	color:#e83421;
+}
+.visa-person{
+	width: 285px;
+	height: 80px;
+	margin:0 20px 20px 0;
+	background-color: #eee;
+	padding:16px 20px;
+}
+.visa-person .icon-img{
+	height: 40px;
+	width: 65px;
+	margin-right: 10px;
+}
+.visa-person .icon-img img{
+	width: 100%;
+}
+.visa-name{
+	font-weight: bold;
+	line-height: 2;
+}
+.visa-price{
+	font-weight: bold;
+	line-height: 2;
+}
+.visa-price span{
+	color:#e83421;
+	font-size: 14px;
+}
+.visa-list div:nth-child(4){
+	margin-right: 0;
+}
+.visa-list div:nth-child(7){
+	margin-right: 0;
+}
+.visa-list div:nth-child(10){
+	margin-right: 0;
+}
